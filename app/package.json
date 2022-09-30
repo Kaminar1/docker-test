@@ -1,0 +1,26 @@
+{
+  "name": "simple-express-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kaminar1/docker-test.git"
+  },
+  "author": "Kaminar1,nanuchi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kaminar1/docker-test/issues"
+  },
+  "homepage": "https://github.com/Kaminar1/docker-test#readme"
+}
