@@ -1,16 +1,15 @@
-FROM node:13-alpine
+FROM node:18-alpine
 
-ENV MONGO_DB_USERNAME=mongoadmin \
-    MONGO_DB_PWD=coco
+RUN apk add --update --no-cache bash dos2unix libintl icu
+RUN mkdir -p /caridea/app
 
-RUN mkdir -p /home/app
+COPY ./cliapp /caridea/app
 
-COPY ./app /home/app
+WORKDIR /caridea/app
 
-# set default dir so that next commands executes in /home/app dir
-WORKDIR /home/app
+#RUN bash ./TwitchDownloaderCLI
 
 RUN npm install
 
-CMD ["node", "server.js"]
+CMD ["node", "twitchdl.js"]
 
